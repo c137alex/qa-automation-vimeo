@@ -21,6 +21,6 @@ Once you have installed and run the test:
 0. Familiarize yourself with [WebdriverIO's selectors (CSS3)](https://webdriver.io/docs/selectors), [element API (such as getText)](https://webdriver.io/docs/api/element/getText) and [expect functions](https://webdriver.io/docs/api/expect-webdriverio)
 0. Familiarize yourself with the [main-page page object](test/pageobjects/main-page.js) and the [test file](test/specs/test.js)
 0. Add a step to the test file to click an item in the drop-down with text equal to 'click to reveal form'
-0. Commit and push your change and share it with Vimeo recruiting
+0. Commit and push your change (at LEAST 24 hours before the evaluation) and share it with Vimeo recruiting
 
 The rest of the exercise will be done during the technical interview via Zoom screenshare. A Vimeo engineer will ask you to continue to add steps to the test.
