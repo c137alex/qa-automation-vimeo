@@ -23,4 +23,4 @@ Once you have installed and run the test:
 0. Add a step to the test file to click an item in the drop-down with text equal to 'click to reveal form'
 0. Commit and push your change (at LEAST 24 hours before the evaluation) and share it with Vimeo recruiting
 
-The rest of the exercise will be done during the technical interview via Zoom screenshare. A Vimeo engineer will ask you to continue to add steps to the test.
+The rest of the exercise will be done during the technical exercise via Zoom screenshare. A Vimeo engineer will ask you to continue to add steps to the test.
