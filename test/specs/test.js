@@ -5,5 +5,13 @@ describe('My test application', () => {
         await MainPage.open();
 
         await MainPage.dropButton.click();
+
+        await MainPage.dropDownMenuByText.click();
+
+        /**
+        * going above and beyond
+        expect(await MainPage.emailAddressInputField).toBeDisplayed();
+        expect(await MainPage.passwordInputField).toBeDisplayed();
+        */
     });
 });
