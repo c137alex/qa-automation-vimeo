@@ -43,48 +43,46 @@ class MainPage extends Page {
         let ddElement = $('.dropdown-menu');
         let val = $(await ddElement.getText());
         expect(val).toEqual('click to reveal form').click();
-
     }
 
-    async emailInput () {
-        //await this.emailAddressInputField.click();
-        //let input = await $(`[type=email]`);
-        let input = await $(`#input-email`);
-        $(await input.setValue('sophie.wilson137@null.arm64.io'));
-        //return $(await input)
-        //return $(await input.setValue('sophie.wilson137@null.arm64.io'));
+    async inputEmail() {
+
+        let input = this.emailAddressInputField
+        await expect(input).toBeDisplayed( {wait: 10000} ) 
+        await input.setValue('derp@derp.com');
     }
 
-    async passwordInput () {
-        //await this.passwordInputField.click();
-        //let input = await $(`[type=password]`);
-        let input = await $(`#password`);
-        $(await input.setValue('AllYourBaseAreBelongToUs'));
-        //return $(await input.setValue('AllYourBaseAreBelongToUs'));
+    async inputPassword() {
+        let input = this.passwordInputField
+        await expect(input).toBeDisplayed( {wait: 10000} )
+        await input.setValue('Derpderp123')
     }
 
-    async clickCheckMeOutCheckbox () {
-        await this.checkMeOutCheckBox.click()
+    async clickCheckMeOutCheckbox() {
+        let input = this.checkMeOutCheckBox
+        await expect(input).toBeDisplayed( {wait: 10000} )
+        await input.click()
     }
 
-    async clickSubmitButton () {
-        await this.submitButton.click()
+    async clickSubmitButton() {
+        let element = this.submitButton
+        await expect(element).toBeDisplayed( {wait: 10000} )
+        await element.click()
     }
 
     async delayedElement1 () {
         // use element li and search by text
-        let element = $('div=Took me a bit but here I am!');
-        console.log(await element.getText());
+        let element = $('div.delayedElem');
+        //await expect(element).toBeDisplayed( {wait: 5000})
+        //await expect(element).getText().toEqual("Took me a bit but here I am!");
+        await expect(element).toHaveText("Took me a bit but here I am!");
         //await dropDownMenuItem2.click();
         //return dropDownMenuItem2;
     }
 
-    async delayedElement2 () {
-        // use element li and search by text
-        let element = $('span=Another delayed elem');
-        console.log(await element.getText());
-        //await dropDownMenuItem2.click();
-        //return dropDownMenuItem2;
+    async hereIsTheDesiredText () {
+        let element = $("div[id^='base-']")
+        await expect(element).toHaveText("here is the desired text")
     }
 }
 
